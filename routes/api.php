@@ -11,3 +11,4 @@ Route::get('/palindrome', [TestController::class, 'palindrome'])->name("count-pa
 Route::get('/students', [TestController::class, 'students'])->name("two-students-group");
 Route::get('/nominee', [TestController::class, 'nominee'])->name("nominee");
 Route::get('/beer', [TestController::class, 'get_content_beer'])->name("beer-recipes");
+Route::get('jokes', [TestController::class, 'get_dad_jokes'])->name("dad-jokes");

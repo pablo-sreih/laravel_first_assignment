@@ -21,6 +21,12 @@ class TestController extends Controller{
         echo ($diff);
     }
 
+    public function get_dad_jokes(){
+        $get = file_get_contents('https://icanhazdadjoke.com/slack');
+        $decode_text = json_decode($get["attachments"]["text"]);
+        echo json_encode($decode_text);
+    }
+
     public function get_content_beer(){
         $get = file_get_contents('https://api.punkapi.com/v2/beers');
         $arr = json_decode($get);

@@ -39,6 +39,8 @@ class TestController extends Controller{
     }
 
     public function nominee(){
-        
+        $arr = ['charbel', 'charbel', 'pablo', 'charbel', 'charbel'];
+        $nominee = rand(0, count($arr));
+        echo ($arr[$nominee]);
     }
 }

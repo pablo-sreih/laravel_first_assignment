@@ -21,6 +21,13 @@ class TestController extends Controller{
         echo ($diff);
     }
 
+    public function get_content_beer(){
+        $get = file_get_contents('https://api.punkapi.com/v2/beers');
+        $arr = json_decode($get);
+        $random = rand(0, count($arr)-1);
+        echo json_encode($arr[$random]);
+    }
+
     public function palindrome(){
         $arr = ['beb', 'tel', 'rate', 'nominee', 'lol'];
         $count = 0;

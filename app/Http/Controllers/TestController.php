@@ -15,7 +15,10 @@ class TestController extends Controller{
     }
 
     public function time(){
-        
+        $year_since = (237*31536000) + (261 * 86400);
+        $t = time();
+        $diff = $t + $year_since;
+        echo ($diff);
     }
 
     public function palindrome(){

@@ -33,7 +33,12 @@ class TestController extends Controller{
         $arr = ['pablo', 'ralph', 'nicole', 'george', 'charbel'];
         $half = floor(count($arr)/2);
         $first_grp = array_slice($arr, 0, $half);
-        json_encode($first_grp);
-        // echo ($first_grp);
+        $scd_grp = array_slice($arr, count($first_grp), count($arr));
+        echo json_encode($first_grp);
+        echo json_encode($scd_grp);
+    }
+
+    public function nominee(){
+        
     }
 }
